@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstDrawerItem"
+        android:title="Share" />
+    <item
+        android:id="@+id/secondDrawerItem"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/thirdDrawerItem"
+        android:title="Privacy Policy" />
+</menu>

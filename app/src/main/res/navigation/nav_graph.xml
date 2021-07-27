@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationcomponentdrawerlayout.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_AFragment"
+            app:destination="@id/AFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_hostFragment_to_BFragment"
+            app:destination="@id/BFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.example.navigationcomponentdrawerlayout.fragments.AFragment"
+        android:label="Fragment A"
+        tools:layout="@layout/fragment_a" />
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.example.navigationcomponentdrawerlayout.fragments.BFragment"
+        android:label="Fragment B"
+        tools:layout="@layout/fragment_b" />
+    <fragment
+        android:id="@+id/termAndConditionFragment"
+        android:name="com.example.navigationcomponentdrawerlayout.fragments.TermAndConditionFragment"
+        android:label="Term &amp; Condition"
+        tools:layout="@layout/fragment_term_and_condition" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.navigationcomponentdrawerlayout.fragments.SettingFragment"
+        android:label="Setting Fragment"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.navigationcomponentdrawerlayout.fragments.HistoryFragment"
+        android:label="History Fragment"
+        tools:layout="@layout/fragment_history" />
+    <action android:id="@+id/action_global_termAndConditionFragment"
+        app:destination="@id/termAndConditionFragment"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@anim/slide_out_bottom"
+        app:popEnterAnim="@anim/slide_in_bottom"
+        app:popExitAnim="@anim/slide_out_top"/>
+</navigation>
